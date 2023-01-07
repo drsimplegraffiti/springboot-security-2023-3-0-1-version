@@ -7,9 +7,9 @@
 ```properties
 
 # configure postgres database
-spring.datasource.url=jdbc:postgresql://localhost:5432/auth
+spring.datasource.url=jdbc:postgresql://localhost:5432/***********
 spring.datasource.username=postgres
-spring.datasource.password=Bassguitar1
+spring.datasource.password=***************
 spring.datasource.driver-class-name=org.postgresql.Driver
 spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.hibernate.ddl-auto=update
@@ -29,10 +29,10 @@ server.port=8080
 ```yaml
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/authsecurity?useSSL=false
+    url: jdbc:mysql://localhost:3306/********?useSSL=false
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: Bassguitar1
+    password: **************
   jpa:
     hibernate:
       ddl-auto: create-drop # This will create and drop the tables every time the application is run
