@@ -1,4 +1,4 @@
-package com.abcode.springboot.secured.demo;
+package com.abcode.springboot.secured.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

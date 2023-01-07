@@ -1,6 +1,6 @@
 package com.abcode.springboot.secured.config;
 
-import com.abcode.springboot.secured.user.UserRepository;
+import com.abcode.springboot.secured.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

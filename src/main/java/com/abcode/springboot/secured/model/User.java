@@ -1,4 +1,4 @@
-package com.abcode.springboot.secured.user;
+package com.abcode.springboot.secured.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -22,8 +22,11 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue
     private Integer id;
+
+
     private String firstname;
     private String lastname;
+    @Column(unique = true, nullable = false)
     private String email;
     private String password;
 

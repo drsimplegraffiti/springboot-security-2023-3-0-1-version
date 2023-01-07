@@ -1,9 +1,12 @@
-package com.abcode.springboot.secured.auth;
+package com.abcode.springboot.secured.service;
 
-import com.abcode.springboot.secured.user.UserRepository;
+import com.abcode.springboot.secured.response.AuthenticationRequest;
+import com.abcode.springboot.secured.response.AuthenticationResponse;
+import com.abcode.springboot.secured.response.RegisterRequest;
+import com.abcode.springboot.secured.repository.UserRepository;
 import com.abcode.springboot.secured.config.JwtService;
-import com.abcode.springboot.secured.user.Role;
-import com.abcode.springboot.secured.user.User;
+import com.abcode.springboot.secured.model.Role;
+import com.abcode.springboot.secured.model.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

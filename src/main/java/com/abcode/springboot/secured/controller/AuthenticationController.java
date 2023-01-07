@@ -1,5 +1,9 @@
-package com.abcode.springboot.secured.auth;
+package com.abcode.springboot.secured.controller;
 
+import com.abcode.springboot.secured.response.AuthenticationRequest;
+import com.abcode.springboot.secured.response.AuthenticationResponse;
+import com.abcode.springboot.secured.service.AuthenticationService;
+import com.abcode.springboot.secured.response.RegisterRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

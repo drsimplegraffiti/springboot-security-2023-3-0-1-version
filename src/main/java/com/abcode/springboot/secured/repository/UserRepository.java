@@ -1,5 +1,6 @@
-package com.abcode.springboot.secured.user;
+package com.abcode.springboot.secured.repository;
 
+import com.abcode.springboot.secured.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
