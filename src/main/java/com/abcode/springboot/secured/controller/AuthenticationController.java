@@ -1,5 +1,6 @@
 package com.abcode.springboot.secured.controller;
 
+import com.abcode.springboot.secured.repository.UserRepository;
 import com.abcode.springboot.secured.response.AuthenticationRequest;
 import com.abcode.springboot.secured.response.AuthenticationResponse;
 import com.abcode.springboot.secured.service.AuthenticationService;
@@ -17,11 +18,22 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthenticationController {
 
     private final AuthenticationService service;
+    private final UserRepository repository;
 
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody RegisterRequest request
     ) {
+        // 1. Check if user exists in database
+        if (repository.existsByEmail(request.getEmail())) {
+            // return 400 bad request as user already exists as message body in response
+            return ResponseEntity.badRequest()
+                    .body(AuthenticationResponse.builder()
+                            .message("User already exists")
+                            .build());
+
+        }
+
         return ResponseEntity.ok(service.register(request));
     }
     @PostMapping("/authenticate")
